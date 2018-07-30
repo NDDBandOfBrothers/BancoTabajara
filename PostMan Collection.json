@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "9d321e04-b4ca-459a-b0a3-0aa83b77ea3d",
+		"name": "WebService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "47fdf313-8284-4e5b-9e14-0520057d71ff",
+			"name": "Clientes - OK",
+			"item": [
+				{
+					"_postman_id": "2eaf895c-d5b4-495c-9536-12da58809d46",
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t  \"Nome\" : \"Fulanox\",\n        \"Cpf\" : \"0000000000\",\n        \"Rg\" : \"00000\",\n        \"DataNascimento\" : \"1996-06-17T00:00:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "45828409-0d87-42b9-8048-b0118d5f115b",
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"nome\": \"zé\",\n        \"cpf\": \"0000000000\",\n        \"rg\": \"00000\",\n        \"dataNascimento\": \"1997-08-27T07:00:00\",\n        \"id\": 1\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "b9a95d41-f5bb-4317-aeab-6e15a5980977",
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "5ae9feb8-d7a4-4f26-92f3-b897c5d2e842",
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "147b3221-85b6-4bc8-a66a-e11189a71d3f",
+					"name": "Get all w/ limit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes/?limite=90",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes",
+								""
+							],
+							"query": [
+								{
+									"key": "limite",
+									"value": "90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "bbe3f669-14a0-487d-b0a8-d7c55826d867",
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "48dbd0f2-5f65-4489-9b05-afefd520b1e0",
+					"name": "Get All XML",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "1bbb4e79-d5a4-40d2-b375-98b9351069dd",
+			"name": "Contas - OK",
+			"item": [
+				{
+					"_postman_id": "1c4d6dab-90b4-4f3b-8cf0-87240cc0b836",
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"limite\" : 1000,\n  \"estado\" : true,\n  \"titular\": {\n    \"Id\" : 1,\n    \"Nome\" : \"Fulanox\",\n    \"Cpf\" : \"0000000000\",\n    \"Rg\" : \"00000\",\n    \"DataNascimento\" : \"1996-06-17T00:00:00\"\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "665f4b50-2032-441f-8781-bbece8488848",
+					"name": "Get all w/ limit",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "70745d88-1d97-4747-beeb-6d63a2b9a631",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "8f20f8fe-e38f-4427-8bd9-f61541b04df1",
+					"name": "Update(Put)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movimentacao\": null,\n    \"movimentacoes\": [],\n    \"titular\": {\n        \"id\": 1\n    },\n    \"numero\": 0,\n    \"saldo\": 0,\n    \"estado\": true,\n    \"limite\": 2000,\n    \"saldoTotal\": 1000,\n    \"id\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "7d34cb7a-99e6-4bed-b479-e370750ce742",
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "2df525b4-f0a1-44c7-b529-64e80cc432d9",
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "8ec877e0-25ad-4364-9bdd-93e6ff8757db",
+					"name": "Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "estado",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "da9d861c-1075-4be3-9cc7-a04ca83691d1",
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "dc194b24-aca7-4bb2-905e-b43592946261",
+					"name": "Get all XML",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1e5e6b60-569b-4730-a825-40aaec0e6fd4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6bdc6e4-b4fd-4ac3-83f8-e623659f3bfe",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"_postman_id": "5d0608d4-5d38-4b74-9620-0d53727f6eb6",
+			"name": "Transações - OK",
+			"item": [
+				{
+					"_postman_id": "205824ce-cda1-4b7c-9e20-6599a1376c8d",
+					"name": "Deposito",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "100"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/deposito/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"deposito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "0c1e08ba-c92f-4441-a353-eeb8f8ebf990",
+					"name": "Saque",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "123.30"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/saque/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"saque",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "097eabcf-4831-4937-9ca8-5e09241f0920",
+					"name": "Transferencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "120.40"
+						},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/transferencia/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"transferencia",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "0fa3884b-b1a3-45f1-85a5-2612fa7f0320",
+					"name": "GerarExtrato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/extrato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"extrato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "ebf8b765-bc7d-4909-b13a-994ad06fc8cc",
+					"name": "GerarExtrato XML",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:64217/api/contas/extrato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64217",
+							"path": [
+								"api",
+								"contas",
+								"extrato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5ae16a75-a18b-4531-bfab-f9d7937827f0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6046525-b060-4dd7-bc08-a736af754b3f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
